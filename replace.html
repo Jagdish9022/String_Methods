@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        div {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input1, .input2, .input3, textarea, .btn {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            resize: none;
+        }
+        h1{
+          text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <div>
+        <h1>Replace</h1>
+        <input type="text" placeholder="enter text" id="text" class="input1">
+        <input type="text" placeholder="enter what replace " id="replace" class="input2">
+        <input type="text" placeholder="entetr replace text " id="wreplace" class="input3">
+        <input type="button" value="Click" id="end" onclick="replace()" class="btn">
+        <textarea name="" id="result" cols="30" rows="10"></textarea>
+        <p>
+            The replace() method in JavaScript is a string method used to replace a specified substring or pattern in a string with another substring. It operates on strings and allows you to search for a particular sequence of characters within the string and substitute it with another set of characters.</p>
+    </div>
+    <script>
+        function replace(){
+            let inputText = document.getElementById("text").value;
+            let replace = document.getElementById("replace").value;
+            let wreplace = document.getElementById("wreplace").value;
+
+            let out = inputText.replace(replace,wreplace);
+
+            document.getElementById("result").innerText = out;
+        }
+    </script>
+
+</body>
+</html>

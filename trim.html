@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trim</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        div {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input1, textarea, .btn {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            resize: none;
+        }
+        h1{
+          text-align: center;
+        }
+        </style>
+        
+</head>
+<body>
+    <div>
+        <h1>Trim</h1>
+    <input type="text" placeholder="enter text" id="text" class="input1">
+    <input type="button" value="Click" id="trim" onclick="trim()" class="btn">
+    <textarea name="" id="result" cols="30" rows="10"></textarea>
+    <p>The trim() method in JavaScript is used to remove whitespace (spaces, tabs, and line breaks) from both ends of a string. Whitespace at the beginning and end of a string is often considered unnecessary and may need to be removed in certain situations. The trim() method is particularly useful when working with user input or when dealing with data that might have leading or trailing spaces that need to be disregarded.</p>
+</div>
+<script>
+        function trim(){
+            let inputText = document.getElementById("text").value;
+             
+            let output = inputText.trim();
+
+            document.getElementById("result").innerText = output;
+        }
+    </script>
+</body>
+</html>

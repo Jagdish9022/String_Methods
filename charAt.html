@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CharAt 🤩
+            
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
+            }
+    
+            div {
+                max-width: 600px;
+                margin: 50px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+    
+            .input1, .input2, textarea, .btn {
+                margin-bottom: 10px;
+                padding: 10px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+    
+            .btn {
+                background-color: #4CAF50;
+                color: #fff;
+                cursor: pointer;
+            }
+    
+            .btn:hover {
+                background-color: #45a049;
+            }
+    
+            textarea {
+                resize: none;
+            }
+            h1{
+                text-align: center;
+            }
+            </style>
+    </head>
+    <body>
+        <div>
+            <h1>CharAt</h1>
+            <input type="text" placeholder="enter stirng" id="text" class="input1">
+            <input type="text" placeholder="enter index " id="text2" class="input2">
+            <input type="button" value="Click" id="end" onclick="charat()" class="btn">
+            <textarea name id="result" cols="30" rows="10"></textarea>
+            <p>
+                The charAt() method is a JavaScript string method that returns the character at a specified index within a string. The index is a zero-based integer, meaning the first character in the string is at index 0, the second character is at index 1, and so on.</p>
+        </div>
+
+        <script>
+            function charat(){
+                let fstring = document.getElementById("text").value;
+                let sstring = document.getElementById("text2").value;
+
+                let output = fstring.charAt(sstring);
+
+                document.getElementById("result").innerText = output;
+            }
+        </script>
+    </body>
+</html>

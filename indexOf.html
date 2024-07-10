@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>IndexOf</title>
+        <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        div {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .input1, .input2, textarea, .btn {
+            margin-bottom: 10px;
+            padding: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #45a049;
+        }
+
+        textarea {
+            resize: none;
+        }
+        h1{
+          text-align: center;
+        }
+        </style>
+    </head>
+    <body>
+        <div> 
+            <h1>IndexOf</h1>
+            <input type="text" placeholder="enter stirng" id="text"
+                class="input1">
+            <input type="text" placeholder="enter text " id="text2"
+                class="input2">
+            <input type="button" value="Click" id="end" onclick="concat()"
+                class="btn">
+            <textara name id="result" cols="30" rows="10"></textara>
+            <p>
+                The indexOf() method in JavaScript is used to search for a specified substring or character within a string. It returns the index of the first occurrence of the specified value, or -1 if the value is not found. </p>
+        </div>
+        <script>
+            function concat(){
+                let inputText = document.getElementById("text").value;
+                let index = document.getElementById("text2").value;
+
+                let output = inputText.indexOf(index);
+
+                document.getElementById("result").innerText = "index No is " + output;
+            }
+        </script>
+    </body>
+</html>

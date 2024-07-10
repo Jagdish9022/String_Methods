@@ -1,0 +1,70 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="array.css">
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter name" id="text" class="input1">
+        <input type="button" value="Click" onclick="array()" class="btn">
+        <textarea id="result" cols="30" rows="10"></textarea>
+    </div>
+    <script>
+        function array() {
+            const input = document.getElementById("text").value.toLowerCase();
+            const index = {
+                jagdish: 0, mayur: 1, yogesh: 2, krushna: 3,
+                rahul: 4, uddhav: 5, pranav: 6, shantanu: 7,
+                dnyaneswar: 8, ruturaj: 9, samir: 10, pratik: 11
+            }[input];
+
+            document.getElementById("result").innerHTML = index !== undefined
+                ? formatObject(person[index])
+                : "no data";
+        }
+
+        function formatObject(obj) {
+            return Object.entries(obj).map(([key, value]) => `${key}: ${value}`).join("\n");
+        }
+
+        const person = [
+            { name: "jagdish Pagar", age: 19, village: "daregaon" },
+            { name : "krushna Gangurde", age : 18, village : "daregaon"},
+            // ... (rest of the array objects)
+        ];
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="array.css">
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter name" id="text" class="input1">
+        <input type="button" value="Click" onclick="array()" class="btn">
+        <textara id="result" cols="30" rows="10"></textara>
+    </div>
+    <script>
+        const person = [
+            { name: "jagdish Pagar", age: 19, village: "daregaon" },
+            // ... (rest of the array objects)
+        ];
+
+        function array() {
+            const input = document.getElementById("text").value.toLowerCase();
+            const index = { jagdish: 0, mayur: 1, yogesh: 2, krushna: 3, rahul: 4, uddhav: 5, pranav: 6, shantanu: 7, dnyaneswar: 8, ruturaj: 9, samir: 10, pratik: 11 }[input];
+            document.getElementById("result").innerHTML = index !== undefined ? Object.entries(person[index]).map(([key, value]) => `${key}: ${value}`).join("\n") : "no data";
+        }
+    </script>
+</body>
+</html>
